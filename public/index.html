@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ZAWAR Fine Jewels — The Art of Fine Jewels · Launching Soon</title>
+<meta name="description" content="ZAWAR Fine Jewels — a fine jewellery house rooted in timeless elegance and thoughtful craftsmanship. Launching soon.">
+<meta name="theme-color" content="#FAFAF7">
+<link rel="canonical" href="https://zawarfinejewels.com/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ZAWAR Fine Jewels">
+<meta property="og:title" content="ZAWAR Fine Jewels — Launching Soon">
+<meta property="og:description" content="The Art of Fine Jewels. Be the first to know.">
+<meta property="og:url" content="https://zawarfinejewels.com/">
+<meta property="og:image" content="https://zawarfinejewels.com/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Jost:wght@300;400&display=swap">
+<link rel="preload" as="image" href="/assets/zawar-film-poster.jpg">
+<style>
+  :root{
+    --soft-white:#FAFAF7; --carbon:#232323; --charcoal:#5D5D5B; --charcoal-dk:#3E3E3C;
+    --taupe:#D9CFC5; --gold:#B28D5C;
+    --serif:'Gilda Display','Canela Text',Georgia,serif;
+    --sans:'Jost','Futura PT','Futura',system-ui,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--soft-white);color:var(--carbon);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  img,video{display:block;max-width:100%}
+
+  /* Hero film */
+  .hero{position:relative;width:100%;height:100vh;height:100svh;max-height:900px;min-height:520px;overflow:hidden;background:var(--carbon);
+        display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
+  .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .scroll-cue{position:relative;margin-bottom:max(28px, env(safe-area-inset-bottom));min-width:44px;min-height:44px;
+        display:flex;flex-direction:column;align-items:center;gap:12px;color:#fff;mix-blend-mode:difference;
+        font-size:11px;letter-spacing:.42em;text-decoration:none;padding-left:.42em}
+  .scroll-cue span.line{display:block;width:1px;height:44px;background:#fff;transform-origin:top;animation:cue 2.4s ease-in-out infinite}
+  @keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1);transform-origin:top}50.1%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+  @media (prefers-reduced-motion:reduce){.scroll-cue span.line{animation:none}}
+
+  /* Launch */
+  .launch{max-width:720px;margin:0 auto;padding:120px 24px 128px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:30px}
+  .launch .logo{width:230px;max-width:70%;height:auto}
+  .rule{display:block;width:64px;height:1px;background:var(--gold)}
+  .tagline{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.6vw,46px);line-height:1.15;letter-spacing:.02em}
+  h1{margin:0;font-weight:400;font-size:clamp(13px,1.2vw,15px);letter-spacing:.5em;padding-left:.5em;color:var(--charcoal-dk)}
+  .lede{margin:0;max-width:460px;font-size:16px;line-height:1.8;color:var(--charcoal)}
+
+  form{width:100%;max-width:440px;display:flex;flex-direction:column;gap:14px;margin-top:16px}
+  label{font-size:12px;letter-spacing:.36em;padding-left:.36em}
+  .row{display:flex;flex-wrap:wrap;gap:10px}
+  .row[hidden]{display:none}
+  input[type=email]{flex:1 1 220px;min-width:0;height:50px;padding:0 16px;background:#fff;border:1px solid var(--charcoal);border-radius:0;
+        color:var(--carbon);font:300 16px var(--sans);-webkit-appearance:none;appearance:none}
+  input[type=email]::placeholder{color:#6E6A64}
+  input[type=email]:focus{outline:2px solid var(--gold);outline-offset:2px}
+  button{flex:1 0 auto;height:50px;padding:0 28px;background:var(--carbon);border:1px solid var(--carbon);border-radius:0;color:var(--soft-white);
+        font:400 12px var(--sans);letter-spacing:.3em;cursor:pointer;transition:background .2s}
+  button:hover{background:#000}
+  button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  button[disabled]{opacity:.6;cursor:wait}
+  .hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+  .status{min-height:1.6em;margin:0;font-size:14px;line-height:1.6;color:var(--charcoal)}
+  .status.ok{font-family:var(--serif);font-size:20px;color:var(--carbon)}
+  .status.err{color:#8A2D1F}
+
+  .ig{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.28em;min-height:44px;margin-top:8px;text-decoration:none}
+  .ig:hover{color:var(--charcoal)}
+
+  footer{background:var(--carbon);color:var(--soft-white)}
+  .foot{max-width:1200px;margin:0 auto;padding:32px 24px calc(32px + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;font-size:13px;letter-spacing:.08em}
+  .foot .copy{color:var(--taupe)}
+  .foot nav{display:flex;flex-wrap:wrap;gap:28px}
+  .foot a{text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+  .foot a:hover{color:var(--taupe)}
+
+  @media (max-width:640px){
+    .launch{padding:72px 20px 80px;gap:24px}
+    .launch .logo{width:180px}
+    .foot{justify-content:center;text-align:center}
+    .foot nav{justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<section class="hero" aria-label="ZAWAR logo film">
+  <video id="film" src="/assets/zawar-logo-film.mp4" poster="/assets/zawar-film-poster.jpg"
+         autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+  <a class="scroll-cue" href="#launch" aria-label="Scroll to launch details">
+    <span>SCROLL</span><span class="line" aria-hidden="true"></span>
+  </a>
+</section>
+
+<main id="launch">
+  <div class="launch">
+    <img class="logo" src="/assets/zawar-full-logo-black.png" alt="ZAWAR Fine Jewels" width="900" height="912">
+    <span class="rule" aria-hidden="true"></span>
+    <p class="tagline">The Art of Fine Jewels</p>
+    <h1>LAUNCHING SOON</h1>
+    <p class="lede">A fine jewellery house rooted in timeless elegance and thoughtful craftsmanship.</p>
+
+    <form id="notify" novalidate>
+      <label for="email">BE THE FIRST TO KNOW</label>
+      <div class="row">
+        <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Your email address" required>
+        <div class="hp" aria-hidden="true"><label for="website">Leave empty</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <button type="submit">NOTIFY ME</button>
+      </div>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </form>
+
+    <a class="ig" href="https://www.instagram.com/zawarfinejewels/" target="_blank" rel="noopener">
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></svg>
+      <span>@ZAWARFINEJEWELS</span>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="foot">
+    <span class="copy">© <span id="yr">2026</span> ZAWAR Fine Jewels</span>
+    <nav aria-label="Contact">
+      <a href="https://www.instagram.com/zawarfinejewels/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:concierge@zawarfinejewels.com">concierge@zawarfinejewels.com</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Make sure the film starts on every browser (iOS Safari included)
+  (function () {
+    var v = document.getElementById('film');
+    v.muted = true; v.defaultMuted = true;
+    var p = v.play && v.play();
+    if (p && p.catch) p.catch(function () {
+      var start = function () { v.play().catch(function(){}); window.removeEventListener('touchstart', start); window.removeEventListener('click', start); };
+      window.addEventListener('touchstart', start, { once: true, passive: true });
+      window.addEventListener('click', start, { once: true });
+    });
+  })();
+
+  // Notify-me form → /api/notify
+  (function () {
+    var form = document.getElementById('notify');
+    var email = document.getElementById('email');
+    var btn = form.querySelector('button');
+    var status = document.getElementById('status');
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      status.className = 'status'; status.textContent = '';
+      var value = email.value.trim();
+      if (!re.test(value)) {
+        status.className = 'status err';
+        status.textContent = 'Please enter a valid email address.';
+        email.focus();
+        return;
+      }
+      btn.disabled = true; btn.textContent = 'SENDING…';
+      fetch('/api/notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: value, website: document.getElementById('website').value })
+      })
+      .then(function (r) { return r.json().catch(function(){ return {}; }).then(function (d) { return { ok: r.ok, d: d }; }); })
+      .then(function (res) {
+        if (res.ok) {
+          form.querySelector('.row').hidden = true;
+          status.className = 'status ok';
+          status.textContent = 'Thank you. You will be among the first to know.';
+        } else {
+          throw new Error(res.d && res.d.error);
+        }
+      })
+      .catch(function (err) {
+        status.className = 'status err';
+        status.textContent = (err && err.message) || 'Something went wrong. Please try again, or write to concierge@zawarfinejewels.com.';
+        btn.disabled = false; btn.textContent = 'NOTIFY ME';
+      });
+    });
+  })();
+</script>
+</body>
+</html>
