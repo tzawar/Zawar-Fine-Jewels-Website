@@ -14,3 +14,7 @@ enabled = true
 
 # Custom domains are added in the Cloudflare dashboard once the domains are on Cloudflare:
 #   zawarfinejewels.com, www.zawarfinejewels.com, zawarfinejewels.in, www.zawarfinejewels.in
+
+[vars]
+SUPABASE_URL = "https://gygznkqpqdqrlyyocknr.supabase.co"
+# SUPABASE_SERVICE_ROLE_KEY is a secret set in the Cloudflare dashboard (never commit it)
