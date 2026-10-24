@@ -12,8 +12,13 @@ not_found_handling = "single-page-application"
 [observability]
 enabled = true
 
-# Custom domains are added in the Cloudflare dashboard once the domains are on Cloudflare:
-#   zawarfinejewels.com, www.zawarfinejewels.com, zawarfinejewels.in, www.zawarfinejewels.in
+# Domains served by this Worker (.in and www redirect to zawarfinejewels.com in src/worker.js)
+routes = [
+  { pattern = "zawarfinejewels.com", custom_domain = true },
+  { pattern = "zawarfinejewels.in", custom_domain = true },
+  { pattern = "www.zawarfinejewels.in", custom_domain = true },
+  { pattern = "www.zawarfinejewels.com/*", zone_name = "zawarfinejewels.com" },
+]
 
 [vars]
 SUPABASE_URL = "https://gygznkqpqdqrlyyocknr.supabase.co"
